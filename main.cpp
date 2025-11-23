@@ -5,11 +5,11 @@ int main(){
     sf::RenderWindow window(sf::VideoMode(W,H), "Bola Kok hijau");
     window.setFramerateLimit(60);
 
-    sf::CircleShape ball(20.f);             // radius 20
+    sf::CircleShape ball(20.f);             
     ball.setFillColor(sf::Color::Green);
     ball.setPosition(100.f,100.f);
 
-    float vx=3.f, vy=2.f;                   // velocity
+    float vx=3.f, vy=2.f;                   
 
     while(window.isOpen()){
         sf::Event e;
@@ -18,8 +18,8 @@ int main(){
         ball.move(vx, vy);
         auto p = ball.getPosition();
         float r = ball.getRadius();
-        if(p.x <= 0 || p.x + 2*r >= W) vx = -vx;   // bounce x
-        if(p.y <= 0 || p.y + 2*r >= H) vy = -vy;   // bounce y
+        if(p.x <= 0 || p.x + 2*r >= W) vx = -vx;   
+        if(p.y <= 0 || p.y + 2*r >= H) vy = -vy;   
 
         window.clear(sf::Color::Black);
         window.draw(ball);
