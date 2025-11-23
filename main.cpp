@@ -1,47 +1,30 @@
 #include <SFML/Graphics.hpp>
 
-// g++ main.cpp -o example     -lsfml-graphics -lsfml-window -lsfml-system
-// ./example
+int main(){
+    const int W=800, H=600;
+    sf::RenderWindow window(sf::VideoMode(W,H), "Bola Kok hijau");
+    window.setFramerateLimit(60);
 
+    sf::CircleShape ball(20.f);             // radius 20
+    ball.setFillColor(sf::Color::Green);
+    ball.setPosition(100.f,100.f);
 
-int main() {
-    // Create a window (800x600)
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Example");
+    float vx=3.f, vy=2.f;                   // velocity
 
-    // Circle shape
-    sf::CircleShape circle(50.f);   // radius 50
-    circle.setFillColor(sf::Color::White);
-    circle.setPosition(100, 100);
+    while(window.isOpen()){
+        sf::Event e;
+        while(window.pollEvent(e)) if(e.type==sf::Event::Closed) window.close();
 
-    // Velocity
-    sf::Vector2f velocity(2.0f, 1.5f);
+        ball.move(vx, vy);
+        auto p = ball.getPosition();
+        float r = ball.getRadius();
+        if(p.x <= 0 || p.x + 2*r >= W) vx = -vx;   // bounce x
+        if(p.y <= 0 || p.y + 2*r >= H) vy = -vy;   // bounce y
 
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            // Close on window X or ESC
-            if (event.type == sf::Event::Closed ||
-               (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)) {
-                window.close();
-            }
-        }
-
-        // Move circle
-        sf::Vector2f pos = circle.getPosition();
-        pos += velocity;
-
-        // Bounce inside window
-        if (pos.x < 0 || pos.x + circle.getRadius()*2 > 800) velocity.x *= -1;
-        if (pos.y < 0 || pos.y + circle.getRadius()*2 > 600) velocity.y *= -1;
-
-        circle.setPosition(pos);
-
-        // Draw
         window.clear(sf::Color::Black);
-        window.draw(circle);
+        window.draw(ball);
         window.display();
     }
-
 
     return 0;
 }
