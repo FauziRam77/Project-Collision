@@ -10,7 +10,7 @@ int main() {
 
     // Circle shape
     sf::CircleShape circle(50.f);   // radius 50
-    circle.setFillColor(sf::Color::Cyan);
+    circle.setFillColor(sf::Color::White);
     circle.setPosition(100, 100);
 
     // Velocity
@@ -41,6 +41,7 @@ int main() {
         window.draw(circle);
         window.display();
     }
+
 
     return 0;
 }
