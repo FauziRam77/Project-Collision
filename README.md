@@ -4,8 +4,8 @@
 Simulasi ini memperlihatkan sebuah **particle** yang bertabrakan atau dibilangnya **collision** yang outputnya memperlihatkan bola bola yang mantul satu sama lain. Simulasi ini fokus ke metode **Quadtree** dan **Brute Force**, kedua implementasi ini dapat memperlihatkan perbedaan pencarian collision pada bola. Jika menggunakan mode brute force output akan lebih lambat dibandingankan dengan menggunakan quadtree diakrenakan brute force mendetect suatu collision itu pada semua bola jadi kompleksitas waktu **O(n^2)** lama sedangkan quad tree mengecek bola di daerah yang terjadi collision kompleksitas waktunya bisa jadi **(log N)** jadi sangat cepat. \
 
 # **TUJUAN**
--Mengetahui apa saja perbedaan algoritma brute force dan quadtree
--mengetahui apa saja itu kegunaan quadtree dalam simulasi particle collision
+- Mengetahui apa saja perbedaan algoritma brute force dan quadtree
+- Mengetahui apa saja itu kegunaan quadtree dalam simulasi particle collision
 
 # **Fitur Utama**
 
