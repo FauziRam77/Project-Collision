@@ -18,7 +18,7 @@ Simulasi ini memperlihatkan sebuah **particle** yang bertabrakan atau dibilangny
 - Ui yang memperlihatkan Fps, mode yang digunakan, jumlah bola, kecepatan, dan kontrol
 
 # **Tempat File**
-File gabungan ada di main.cpp sudah tergabung algoritma Bruteforce dan Quadtree 
+File gabungan ada di folder Project-Collision yang bernama main.cpp sudah tergabung algoritma Bruteforce dan Quadtree 
 
 # **Kesimpulan**
 Pada simulasi berhasi mengimplementasikan brute force dan quad tree yang menunjukkan keefektifannya quad tree untuk melacak suatu collision dengan sangan cepat **(log N)** dengan cara pembagian grid pada daerah sebanyak 4 untuk jika terjadi collision di suatu daerah, daerah itu saja yang di cek tidak semua.
