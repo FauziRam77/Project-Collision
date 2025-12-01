@@ -17,6 +17,9 @@ Simulasi ini memperlihatkan sebuah **particle** yang bertabrakan atau dibilangny
 - tombol untuk menambah bola dan kecepatan
 - Ui yang memperlihatkan Fps, mode yang digunakan, jumlah bola, kecepatan, dan kontrol
 
+# **Tempat File**
+File gabungan ada di main.cpp sudah tergabung algoritma Bruteforce dan Quadtree 
+
 # **Kesimpulan**
 Pada simulasi berhasi mengimplementasikan brute force dan quad tree yang menunjukkan keefektifannya quad tree untuk melacak suatu collision dengan sangan cepat **(log N)** dengan cara pembagian grid pada daerah sebanyak 4 untuk jika terjadi collision di suatu daerah, daerah itu saja yang di cek tidak semua.
 Dibandingkan dengan brute force yang mendetect semua bola yang bertabrakan bikin waktu jadi tidak efisien dan lambat **O(n^2)** dan alhasil pengedropan fps karena semua bola itu di cek satu persatu.
