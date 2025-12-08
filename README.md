@@ -122,7 +122,7 @@ membentuk grid hijau yang semakin kecil, sesuai kedalaman QuadTree.
 | Stabilitas FPS        | Buruk                   | Bagus                      |
 | Visual                | Tidak ada               | Grid QuadTree hijau        |
 
-
+https://github.com/user-attachments/assets/204513ca-642c-4781-b32f-2176dfecbd06
 
 # **Kesimpulan**
 Pada simulasi berhasi mengimplementasikan brute force dan quad tree yang menunjukkan keefektifannya quad tree untuk melacak suatu collision dengan sangan cepat **(log N)** dengan cara pembagian grid pada daerah sebanyak 4 untuk jika terjadi collision di suatu daerah, daerah itu saja yang di cek tidak semua.
